@@ -1,0 +1,35 @@
+allprojects{
+    group = 'chire.val.tutorial'
+    version = '1.0.0'
+
+    repositories {
+        mavenCentral()
+        maven{ url 'https://www.jitpack.io' }
+    }
+}
+
+
+project('core') {
+    apply plugin: "java-library"
+
+    dependencies {
+        api 'javazoom:jlayer:1.0.1'
+        api 'org:jaudiotagger:2.0.3'
+    }
+}
+
+
+project('desktop') {
+
+}
+
+//task testGame {
+//    dependsOn shadowJar
+//    doLast {
+//        exec {
+//            commandLine 'cmd', "/c", "$buildDir\\libs\\${project.archivesBaseName}-${version}.jar"
+//        }
+//    }
+//}
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/core/src/chire/val/tutorial/io/CRFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/core/src/chire/val/tutorial/scene/GameScene.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/core/src/chire/val/tutorial/util/CRString.java" charset="GBK" />
+  </component>
+</project>

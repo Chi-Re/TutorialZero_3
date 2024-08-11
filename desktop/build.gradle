@@ -1,0 +1,33 @@
+plugins {
+    id "java"
+    id 'com.github.johnrengelman.shadow' version '2.0.4'
+}
+
+shadowJar{
+    manifest.attributes(
+        'Main-Class': 'chire.val.tutorial.DesktopLauncher'
+    )
+}
+
+sourceSets.main {
+    java.srcDirs = ["src/"]
+}
+sourceSets.test.java.srcDirs = ["test/"]
+
+dependencies {
+    implementation project(':core')
+}
+
+
+task testGame {
+    dependsOn shadowJar
+    doLast {
+        def cmd = 'cmd /c start cmd.exe'
+
+        // 在新的命令行窗口中运行构建的jar程序
+        def jarPath = "${buildDir}/libs/${project.archivesBaseName}-${version}.jar"
+        def runJar = "java -jar ${jarPath}"
+        def commandLine = "${cmd} /c ${runJar}"
+        commandLine.execute()
+    }
+}

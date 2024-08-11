@@ -1,0 +1,3 @@
+rootProject.name = 'TutorialZero'
+
+include 'core', 'desktop'
